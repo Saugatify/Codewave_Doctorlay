@@ -1,13 +1,25 @@
-// index.js
-import express from 'express';
-
+import express from "express"
+import 'dotenv/config';
+import userRoutes from "./routes/userRoutes.js"
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+import connectDb from "./config/dbConnection.js";
+
+const PORT = process.env.PORT || 5000;
+
+connectDb();
+
+app.use(express.json());
+
+app.use('/api/userdata', userRoutes);
+app.get('/',(req,res)=>{
+  res.send("hello")
+})
+
+
+
+
+app.listen(PORT,()=>{
+    console.log(`RUNNING OVER ${PORT}`);
+})

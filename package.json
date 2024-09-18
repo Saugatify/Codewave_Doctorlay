@@ -2,15 +2,21 @@
   "name": "codewave_doctorlay",
   "version": "1.0.0",
   "description": "Helps you Generate Code Context for your files",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google/generative-ai": "^0.19.0",
+    "@llama-node/llama-cpp": "^0.1.6",
+    "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "llama-node": "^0.1.6",
+    "mongoose": "^8.6.3",
     "nodemon": "^3.1.5"
   }
 }
