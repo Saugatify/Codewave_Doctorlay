@@ -65,7 +65,7 @@ const userdata = mongoose.Schema({
   familyHistory: {
     type: [String],
     enum: ['None', 'Diabetes', 'Heart Disease', 'Cancer', 'Thyroid'],
-    default: 'None'
+    default: []
   },
   lastCheckupDate: {
     type: Date,
@@ -76,6 +76,9 @@ const userdata = mongoose.Schema({
     type: [String],
     default: []
   },
+  name:{String},
+  email: {String},
+  reminders: [{ time: String, medication: String }],
 });
 
 export default mongoose.model("Userdata", userdata);

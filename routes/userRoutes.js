@@ -1,27 +1,27 @@
 import express from 'express';
 import {
   createUserdata,
+  getAllUserdata,
   getUserdata,
   updateUserdata,
   deleteUserdata,
-  getAllUserdata,
 } from '../controllers/userController.js';
 
 const router = express.Router();
 
 // Create Userdata
-router.post('/', createUserdata);
+router.post('/create', createUserdata);
 
 // Get All Userdata
-router.get('/', getAllUserdata);
+router.get('/list', getAllUserdata);
 
 // Get Single Userdata
-router.get('/:id', getUserdata);
+router.get('/view/:id', getUserdata);
 
 // Update Userdata
-router.put('/:id', updateUserdata);
+router.put('/update/:id', updateUserdata);
 
 // Delete Userdata
-router.delete('/:id', deleteUserdata);
+router.delete('/delete/:id', deleteUserdata);
 
 export default router;

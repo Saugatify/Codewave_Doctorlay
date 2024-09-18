@@ -1,5 +1,4 @@
 import dotenv from "dotenv";
-import mongoose from "mongoose";
 import readline from "readline";
 import Userdata from "./models/Userdata.js";
 import connectDb from "./config/dbConnection.js";
