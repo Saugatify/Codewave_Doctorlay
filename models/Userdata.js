@@ -5,6 +5,9 @@ const userdata = mongoose.Schema(
       type: String,
       required: [true, "Please add name"],
     },
+    disease:{
+      type: String,
+    },
     medicine: {
       type: String,
       required: [true, "Please add email"],
@@ -19,8 +22,15 @@ const userdata = mongoose.Schema(
     },
     hospitalname:{
       type:String,
-      default:"rider",
     },
+    age:{
+      type:String,
+      
+    },
+    bloodlevel:{
+      type:String,
+    }
+
 
 
   },
