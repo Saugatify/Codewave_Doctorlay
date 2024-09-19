@@ -76,7 +76,6 @@ const userdata = mongoose.Schema({
     type: [String],
     default: []
   },
-  name:{String},
   email: {String},
   reminders: [{ time: String, medication: String }],
 });
