@@ -1,2 +1,2 @@
 # Codewave_Doctorlay
-Helps you Generate Code Context for your files
+Fetches Gemini Model for giving you medical advices.
